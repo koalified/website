@@ -4,10 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Koalified Demo</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/public/js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
+    <link rel="stylesheet"
+      href="/public/css/qtcreator_dark.css">
+    <script src="/public/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
 </head>
 <body>
-    <h1>HI!
-    </h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">🐨 Koalified</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+                
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/DomainTools/koalified_python">Github</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="jumbotron jumbotron-custom">
+        <div class="lead">
+            <h1>
+                <b>Koalified</b> allows you to specify:
+            </h1>
+            <p>
+            What data must contain, <br />
+            What data can contain, <br />
+            and what data ideally contains.
+            </p>
+            <p>Koalified is built for the cases where you don't have control over the source data but want to capture as much data as possible, while getting a sense of the quality of that data versus your known ideal.</p>
+            <p>            
+                <a class="ct-btn-scroll ct-js-btn-scroll" href="#section2">
+                    <img id="arrowdown" alt="Arrow Down Icon" src="/public/arrowdown.png"></a>
+                </a>
+            </p>
+        </div>
+    </div>
+    <section id="section2">
+        <div class="container-fluid">
+                <div class="row">
+                <div class="col-md-5 demo-column" id="schema-column">
+                    <div>
+                        <h5>Based on the schema:</h5>
+                        <pre>
+                            <code>
+name+:
+- match [A-z]
+- str= longest=4:int cut=true:bool
+age: int minimum=1:int maximum=10:int
+contact+!:
+phone:
+- int!=
+- str=
+fax: str
+                        </code>
+                    </pre>
+
+                    </div>
+                </div>
+                <div class="col-md-7 demo-column" id="output-column">
+                        <div>
+                            <h5>Check Your Validation Score:</h5>
+                            <div class="row">
+                                <div class="col">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleInputName">Name</label>
+                                                <input type="name" class="form-control" id="exampleInputName" placeholder="Enter Full Name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email">
+                                                <small id="emailHelp" class="form-text text-muted">Enter a sample valid email.</small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputAge">Age</label>
+                                                <input type="age" class="form-control" id="exampleInputAge" placeholder="Enter Age">
+                                                </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputPassword1">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                            </div>
+                                        </form>
+                                </div>
+                                <div class="col">
+                                        
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
