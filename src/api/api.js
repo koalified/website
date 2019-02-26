@@ -1,13 +1,12 @@
 'use strict';
 
-import express from 'express';
+let express = require('express');
 
 const router = express.Router();
 
-
-app.get('/', function (req, res) {
-  res.send('index.html')
+router.get('/', function (req, res) {
+  res.sendFile('/Users/stariel/Coding/NSTT/koalified-website/index.html')
 })
 
 
-export default router;
+module.exports = router;
