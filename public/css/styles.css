@@ -1,0 +1,55 @@
+
+.jumbotron-custom {
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background-image: url('/public/bamboo.png');
+    margin-bottom: 0px;
+}
+
+.lead {
+    width: 60%;
+    margin-left: 20%;
+    padding: 2%;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.lead p {
+    margin: 5% 0%;
+}
+
+#arrowdown {
+    width: 50px;
+    -webkit-transition: background-color 0.25s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.ct-btn-scroll {
+    transition: all 0.3s ease-in-out;
+}
+
+.demo-column {
+    padding: 5%;
+}
+#schema-column {
+    background-color: black;
+    color: white;
+    height: 500px;
+}
+
+#output-column {
+    background-color: white;
+    height: 1000px;
+}
+
+.custom-input {
+    background-color: black;
+    color: white;
+}
+
+.custom-input:focus {
+    background-color: black;
+    color: white;
+}
